@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="color-scheme" content="light only">
 <title>The Sparkle Shop</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,21 +12,10 @@
   --coral:#E8643C; --coral-deep:#9E3A22; --on-coral:#FFFFFF;
   --gold:#B9842A; --gold-soft:#F8E6BE; --good:#2C7A4E; --wa:#1FA855;
   --shade:rgba(46,26,22,.55);
+  color-scheme:light;
   --display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
   --body:"Outfit","Avenir Next","Segoe UI",system-ui,sans-serif;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#160E0B; --sand:#1C110E; --peach:#2A1914; --card:#21150F;
-  --ink:#FCEDE3; --ink-soft:#D1AE9F; --line:#3E2820;
-  --coral:#FF9A70; --coral-deep:#5E2414; --on-coral:#2E1A16;
-  --gold:#E7BB5A; --gold-soft:#3D2F17; --good:#7FD1A2; --wa:#2BC266;
-  --shade:rgba(0,0,0,.6); color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#160E0B; --sand:#1C110E; --peach:#2A1914; --card:#21150F;
-  --ink:#FCEDE3; --ink-soft:#D1AE9F; --line:#3E2820;
-  --coral:#FF9A70; --coral-deep:#5E2414; --on-coral:#2E1A16;
-  --gold:#E7BB5A; --gold-soft:#3D2F17; --good:#7FD1A2; --wa:#2BC266;
-  --shade:rgba(0,0,0,.6); color-scheme:dark}
 
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -161,7 +150,6 @@ nav.nv button:hover::after,nav.nv button.on::after{transform:scaleX(1)}
 .steps{display:grid;gap:14px;margin:0 0 20px;padding:0;list-style:none;counter-reset:s}
 .steps li{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
 .steps li::before{counter-increment:s;content:counter(s);width:34px;height:34px;border-radius:50%;background:var(--peach);color:var(--coral-deep);display:grid;place-items:center;font-weight:600}
-:root[data-theme="dark"] .steps li::before{color:var(--coral)}
 .steps b{display:block;font-weight:500}
 .steps span{color:var(--ink-soft);font-size:14px}
 .bridal{display:grid;grid-template-columns:1fr 1.1fr;gap:0;border-radius:10px;overflow:hidden;border:1px solid var(--line)}
@@ -252,6 +240,32 @@ table.br tr.t td{font-weight:600;border-bottom:0;font-size:15.5px}
   .util .r{display:none}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ===== Giva-style light, airy look ===== */
+:root{--bg:#FFFFFF;--sand:#FFF6F1;--peach:#FDEAE2;--line:#F2E2DA;--blush:#FCEEF0;--coral:#E2683F;--coral-deep:#C2543A}
+body{background:#fff}
+.util{background:var(--blush);color:#7A4A3F}
+.util b{color:var(--coral)}
+header.h{box-shadow:0 2px 14px -10px rgba(120,60,40,.25)}
+.btn{border-radius:30px}
+.search{border-radius:30px;background:var(--sand);border-color:transparent}
+.slide .txt{background:linear-gradient(120deg,#FFF8F4,#FDE7DE)}
+.cd div{border-radius:12px;background:#fff}
+.cat .im{border-radius:50%;box-shadow:0 10px 24px -16px rgba(150,70,40,.45);border:3px solid #fff;outline:1px solid var(--line)}
+.tileX{border-radius:20px}
+.listing{background:var(--sand)}
+.pc{border:0;border-radius:16px;box-shadow:0 8px 24px -18px rgba(120,60,40,.45)}
+.pc .im{background:#fff}
+.tab{border-radius:30px;background:#fff}
+.panel{border-radius:20px;border-color:var(--line);box-shadow:0 10px 30px -24px rgba(120,60,40,.4)}
+.bridal{border-radius:20px}
+.rev{border-radius:18px}
+.store{background:linear-gradient(120deg,#FFF1EA,#FDE2D6);color:var(--ink)}
+.store h2{color:var(--ink)}
+.store .kick{color:var(--coral)!important}
+.store .btn-l{background:var(--ink);color:#fff}
+.store .cb{color:var(--ink)}
+footer{background:var(--sand)}
 </style>
 </head><body>
 
